@@ -88,6 +88,7 @@ void typeKey(Key key, uint8_t modifiers, bool tap) {
     kaleidoscope::hid::sendKeyboardReport();
   }
   memcpy(Keyboard.keyReport.allkeys, hid_report.allkeys, sizeof(Keyboard.keyReport));
+  delay(10);
 }
 
 namespace kaleidoscope {
